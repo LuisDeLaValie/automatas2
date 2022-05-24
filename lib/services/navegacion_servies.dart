@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 const String homeRouter = '/';
 const String gramaticaRouter = '/gramatica';
+const String gblRouter = '/gbl';
+const String arbolRouter = '/arboles_derivacion';
 
 // clase para manejar la navegacion entre paginas
 class NavegacionServies {

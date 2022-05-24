@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'view/derivacion/derivacion_view.dart';
 import 'view/glc/glc_view.dart';
 import 'view/gramatica/gramatica_view.dart';
 
@@ -14,6 +15,7 @@ class InicioPage extends StatelessWidget {
         children: [
           GramaticaView(tamano: tamano),
           GlcView(tamano: tamano),
+          DerivacionView(tamano: tamano),
         ],
       ),
     );

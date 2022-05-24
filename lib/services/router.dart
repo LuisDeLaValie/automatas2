@@ -1,3 +1,5 @@
+import 'package:automatas2/ui/page/arbol/arbil_page.dart';
+import 'package:automatas2/ui/page/gbl/gbl_page.dart';
 import 'package:automatas2/ui/page/inicio/inicio_page.dart';
 import 'package:automatas2/ui/page/sobre_gramatica/gramatica_page.dart';
 import 'package:fluro/fluro.dart';
@@ -10,13 +12,19 @@ class Flurorouter {
 
   static void configureRouter() {
     // home
-    router.define(homeRouter, handler: Handler(handlerFunc: (context, params) {
-      return const InicioPage();
-    }), transitionType: TransitionType.none);
-    router.define(gramaticaRouter, handler: Handler(handlerFunc: (context, params) {
-      return  GramaticaPage();
-    }), transitionType: TransitionType.inFromBottom);
-   
+    router.define(homeRouter,
+        handler: Handler(handlerFunc: (context, params) => const InicioPage()),
+        transitionType: TransitionType.none);
+    router.define(gramaticaRouter,
+        handler: Handler(handlerFunc: (context, params) => GramaticaPage()),
+        transitionType: TransitionType.inFromBottom);
+    router.define(gblRouter,
+        handler: Handler(handlerFunc: (context, params) =>  GblPage()),
+        transitionType: TransitionType.inFromBottom);
+    router.define(arbolRouter,
+        handler: Handler(handlerFunc: (context, params) =>  const ArbilPage()),
+        transitionType: TransitionType.inFromBottom);
+
     router.notFoundHandler = _notfount;
   }
 

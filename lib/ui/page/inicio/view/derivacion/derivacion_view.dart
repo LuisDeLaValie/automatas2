@@ -2,36 +2,43 @@ import 'package:animate_do/animate_do.dart';
 import 'package:automatas2/services/navegacion_servies.dart';
 import 'package:flutter/material.dart';
 
-class GlcView extends StatelessWidget {
+class DerivacionView extends StatelessWidget {
   final Size tamano;
 
-  const GlcView({
-    Key? key,
-    required this.tamano,
-  }) : super(key: key);
+  const DerivacionView({Key? key, required this.tamano}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: tamano.height,
-      child: FadeInRight(
-        duration: const Duration(seconds: 5),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            SizedBox(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FadeInLeft(
+            duration: const Duration(seconds: 3),
+            child: SizedBox(
+              width: tamano.width * 0.4,
+              child: Image.asset(
+                "assets/img/argbol1.png",
+                width: tamano.width * 0.4,
+              ),
+            ),
+          ),
+          FadeInRight(
+            duration: const Duration(seconds: 3),
+            child: SizedBox(
               width: tamano.width * 0.4,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Gramáticas Libres de Contexto",
+                    "Árboles de derivación",
                     style: Theme.of(context).textTheme.headline3,
                   ),
                   const SizedBox(height: 30),
                   const Text(
-                      "una gramática libre de contexto (o de contexto libre) es una gramática formal en la que cada regla de producción es de la forma: V → w"),
+                      "Un árbol de derivación permite mostrar gráficamente cómo se puede derivar cualquier cadena de un lenguaje a partir del símbolo distinguido de una gramática que genera ese lenguaje."),
                   const SizedBox(height: 20),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -43,19 +50,15 @@ class GlcView extends StatelessWidget {
                       textStyle: Theme.of(context).textTheme.labelLarge,
                     ),
                     onPressed: () {
-                      NavegacionServies.navigateTo(gblRouter);
+                      NavegacionServies.navigateTo(arbolRouter);
                     },
                     child: const Text("Ver más"),
                   )
                 ],
               ),
             ),
-            SizedBox(
-              width: tamano.width * 0.4,
-              child: Image.asset("assets/img/glb1.png"),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
