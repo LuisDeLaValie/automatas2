@@ -5,7 +5,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 class GramaticaPage extends StatelessWidget {
   GramaticaPage({Key? key}) : super(key: key);
 
- String datos = """
+  String datos = """
 # DEFINICIÓN FORMAL DE GRAMÁTICA
 Una gramática es una cuádrupla :
 
@@ -84,116 +84,13 @@ También llamada "De contexto regular"
     return Scaffold(
       appBar: AppBar(title: const Text("Gramatica")),
       body: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: size.width * 0.2, vertical: 10),
-          child: Markdown(
-            data: datos,
-            selectable: true,
-          ),
-        )
-      
-      
-      
-      // SingleChildScrollView(
-      //   child: Column(
-      //     crossAxisAlignment: CrossAxisAlignment.start,
-      //     children: [
-      //       Row(
-      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //         children: [
-      //           Text(
-      //             "Gramatica",
-      //             style: Theme.of(context).textTheme.headline4,
-      //           ),
-      //           TextButton(
-      //             onPressed: () {
-      //               launchUrl(
-      //                   Uri.parse(
-      //                       "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi8-caY2fb3AhUtJkQIHcjcC1oQFnoECAMQAQ&url=https%3A%2F%2Freflection.uniovi.es%2Fortin%2Fpublications%2Fautomata.pdf&usg=AOvVaw0lPbGXvw5pazNpqL84l4kg"),
-      //                   mode: LaunchMode.externalApplication);
-      //             },
-      //             child: const Text(
-      //               "Funete",
-      //               style: TextStyle(fontSize: 26),
-      //             ),
-      //           ),
-      //         ],
-      //       ),
-      //       const Divider(),
-      //       Padding(
-      //         padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
-      //         child: Text(
-      //           datos[0] ?? "",
-      //           textAlign: TextAlign.center,
-      //           style: GoogleFonts.playfairDisplay(fontSize: 20),
-      //         ),
-      //       ),
-      //       const SizedBox(height: 30),
-      //       const Divider(),
-      //       Row(
-      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //         children: [
-      //           Text(
-      //             'Tipo 0 o "No restringida o recursivamente enumerables"',
-      //             style: Theme.of(context).textTheme.headline4,
-      //           ),
-      //           TextButton(
-      //             onPressed: () {
-      //               launchUrl(
-      //                   Uri.parse(
-      //                       "https://es.wikipedia.org/wiki/Gram%C3%A1tica_(aut%C3%B3mata)"),
-      //                   mode: LaunchMode.externalApplication);
-      //             },
-      //             child: const Text(
-      //               "Funete",
-      //               style: TextStyle(fontSize: 26),
-      //             ),
-      //           ),
-      //         ],
-      //       ),
-      //       Padding(
-      //         padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
-      //         child: Text(
-      //           datos[2] ?? "",
-      //           textAlign: TextAlign.justify,
-      //           style: GoogleFonts.playfairDisplay(fontSize: 18),
-      //         ),
-      //       ),
-      //       Center(child: Image.asset("assets/img/gramatica1-2.png")),
-      //       const SizedBox(height: 30),
-      //       const Divider(),
-      //       Text(
-      //         'Tipo 2 o "libre de contexto"',
-      //         style: Theme.of(context).textTheme.headline4,
-      //       ),
-      //       Padding(
-      //         padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
-      //         child: Text(
-      //           datos[3] ?? "",
-      //           textAlign: TextAlign.justify,
-      //           style: GoogleFonts.playfairDisplay(fontSize: 18),
-      //         ),
-      //       ),
-      //       Center(child: Image.asset("assets/img/gramatica1-3.png")),
-      //       const SizedBox(height: 30),
-      //       const Divider(),
-      //       Text(
-      //         'Tipo 3 o "Regular"',
-      //         style: Theme.of(context).textTheme.headline4,
-      //       ),
-      //       Padding(
-      //         padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
-      //         child: Text(
-      //           datos[4] ?? "",
-      //           textAlign: TextAlign.justify,
-      //           style: GoogleFonts.playfairDisplay(fontSize: 18),
-      //         ),
-      //       ),
-      //       Center(child: Image.asset("assets/img/gramatica1-4.png")),
-      //       const SizedBox(height: 50),
-      //     ],
-      //   ),
-      // ),
+        padding:
+            EdgeInsets.symmetric(horizontal: size.width * 0.2, vertical: 10),
+        child: Markdown(
+          data: datos,
+          selectable: true,
+        ),
+      ),
     );
   }
 }

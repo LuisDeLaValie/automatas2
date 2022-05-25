@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'view/Chomsky/chomsky_view.dart';
 import 'view/derivacion/derivacion_view.dart';
 import 'view/glc/glc_view.dart';
 import 'view/gramatica/gramatica_view.dart';
@@ -16,6 +17,7 @@ class InicioPage extends StatelessWidget {
           GramaticaView(tamano: tamano),
           GlcView(tamano: tamano),
           DerivacionView(tamano: tamano),
+          ChomskyView(tamano: tamano),
         ],
       ),
     );

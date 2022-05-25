@@ -24,42 +24,16 @@ En una gramática libre del contexto, cada producción de P tiene la forma
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar:
-            AppBar(title: const Text('Gramáticas Libres de Contexto (GLC)')),
-        body: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: size.width * 0.2, vertical: 10),
-          child: Markdown(
-            styleSheetTheme: MarkdownStyleSheetBaseTheme.material,
-            data: datos,
-            selectable: true,
-          ),
-        )
-        //  SingleChildScrollView(
-        //   child: Column(
-        //     children: <Widget>[
-        //       Padding(
-        //         padding: EdgeInsets.symmetric(
-        //             horizontal: size.width * 0.1, vertical: 10),
-        //         child: Text(
-        //           datos[0],
-        //           textAlign: TextAlign.justify,
-        //           style: GoogleFonts.playfairDisplay(fontSize: 18),
-        //         ),
-        //       ),
-        //       Padding(
-        //         padding: EdgeInsets.symmetric(
-        //             horizontal: size.width * 0.1, vertical: 10),
-        //         child: Text(
-        //           datos[1],
-        //           textAlign: TextAlign.justify,
-        //           style: GoogleFonts.playfairDisplay(fontSize: 18),
-        //         ),
-        //       ),
-        //     ],
-        //   ),
-        // ),
-
-        );
+      appBar: AppBar(title: const Text('Gramáticas Libres de Contexto (GLC)')),
+      body: Padding(
+        padding:
+            EdgeInsets.symmetric(horizontal: size.width * 0.2, vertical: 10),
+        child: Markdown(
+          styleSheetTheme: MarkdownStyleSheetBaseTheme.material,
+          data: datos,
+          selectable: true,
+        ),
+      ),
+    );
   }
 }

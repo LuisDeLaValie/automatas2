@@ -1,3 +1,4 @@
+import 'package:automatas2/ui/page/Chomsky/chomsky_page.dart';
 import 'package:automatas2/ui/page/arbol/arbil_page.dart';
 import 'package:automatas2/ui/page/gbl/gbl_page.dart';
 import 'package:automatas2/ui/page/inicio/inicio_page.dart';
@@ -23,6 +24,9 @@ class Flurorouter {
         transitionType: TransitionType.inFromBottom);
     router.define(arbolRouter,
         handler: Handler(handlerFunc: (context, params) =>  const ArbilPage()),
+        transitionType: TransitionType.inFromBottom);
+    router.define(chumkyRouter,
+        handler: Handler(handlerFunc: (context, params) =>  const ChomskyPage()),
         transitionType: TransitionType.inFromBottom);
 
     router.notFoundHandler = _notfount;

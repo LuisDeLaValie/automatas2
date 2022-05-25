@@ -20,8 +20,20 @@ class GlcView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.01),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
               width: tamano.width * 0.4,
+              height: tamano.width * 0.4,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -50,8 +62,27 @@ class GlcView extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: const LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment(0.0, 1.0),
+                  colors: <Color>[Colors.greenAccent, Colors.blueAccent],
+                  tileMode: TileMode.repeated,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
               width: tamano.width * 0.4,
+              height: tamano.width * 0.3,
+              padding: const EdgeInsets.all(10),
               child: Image.asset("assets/img/glb1.png"),
             ),
           ],

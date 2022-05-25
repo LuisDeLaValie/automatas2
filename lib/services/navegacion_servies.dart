@@ -4,6 +4,7 @@ const String homeRouter = '/';
 const String gramaticaRouter = '/gramatica';
 const String gblRouter = '/gbl';
 const String arbolRouter = '/arboles_derivacion';
+const String chumkyRouter = '/chomsky';
 
 // clase para manejar la navegacion entre paginas
 class NavegacionServies {
