@@ -18,6 +18,7 @@ class InicioPage extends StatelessWidget {
           GlcView(tamano: tamano),
           DerivacionView(tamano: tamano),
           ChomskyView(tamano: tamano),
+          
         ],
       ),
     );
